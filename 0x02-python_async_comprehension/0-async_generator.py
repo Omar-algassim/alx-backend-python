@@ -5,7 +5,7 @@ from typing import Generator
 import asyncio
 
 
-async def async_generator() -> Generator:
+async def async_generator() -> Generator[float, None, None]:
     """yeild a random number after wait 1 second"""
     for _ in range(10):
         radn_num = random.uniform(0, 10)
