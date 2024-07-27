@@ -4,7 +4,7 @@ from parameterized import parameterized
 from utils import access_nested_map
 
 
-class test_utils(unittest.TestCase):
+class TestAccessNestedMap(unittest.TestCase):
     """test the utils function
     """
     @parameterized.expand([
