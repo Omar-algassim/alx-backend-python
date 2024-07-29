@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """test client class"""
 import unittest
+from unittest.mock import patch
 from client import GithubOrgClient
-from unittest.mock import patch, MagicMock
 from parameterized import parameterized
 
 
@@ -19,5 +19,5 @@ class TestGithubOrgClient(unittest.TestCase):
         git = GithubOrgClient(input)
         self.assertEqual(git.org, expected)
         mock_get.assert_called_once_with(
-            "https://api.github.com/orgs/{}".format(input)
+            f"https://api.github.com/orgs/{input}"
         )
