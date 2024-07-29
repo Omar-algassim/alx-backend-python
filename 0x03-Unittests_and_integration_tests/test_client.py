@@ -40,3 +40,4 @@ class TestGithubOrgClient(unittest.TestCase):
             git = GithubOrgClient('ok')
             self.assertEqual(git.public_repos(), ['ok', 'good'])
             mock_get_json.assert_called_once_with('ok')
+            mock_public_repo.assert_called_once()
